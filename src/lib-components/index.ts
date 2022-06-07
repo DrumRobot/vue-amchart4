@@ -1,1 +1,2 @@
-export { default as VueAmchart4Sample } from './vue-amchart4-sample.vue';
+export { default as BaseChart } from './BaseChart.vue';
+export { default as XYChart } from './XYChart.vue';

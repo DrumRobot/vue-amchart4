@@ -22,7 +22,8 @@
     "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.10.25"
+    "@amcharts/amcharts4": "^4.10.25",
+    "vue-class-component": "^7.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
