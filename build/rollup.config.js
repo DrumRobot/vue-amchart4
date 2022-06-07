@@ -2,6 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import vue from 'rollup-plugin-vue';
+import wildcardExternal from '@oat-sa/rollup-plugin-wildcard-external';
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
@@ -38,6 +39,9 @@ const baseConfig = {
           },
         ],
       }),
+      wildcardExternal([
+        '@amcharts/amcharts4/**',
+      ]),
     ],
     replace: {
       'process.env.NODE_ENV': JSON.stringify('production'),
@@ -67,15 +71,16 @@ const baseConfig = {
 const external = [
   // list external dependencies, exactly the way it is written in the import statement.
   // eg. 'jquery'
+  'tslib',
   'vue',
-  /node_modules/,
+  'vue-class-component',
 ];
 
 // UMD/IIFE shared settings: output.globals
 // Refer to https://rollupjs.org/guide/en#output-globals for details
 const globals = {
   // Provide global variable names to replace your external imports
-  // eg. jquery: '$'
+  'vue-class-component': 'Component',
   vue: 'Vue',
 };
 

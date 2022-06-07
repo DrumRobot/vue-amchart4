@@ -1,5 +1,5 @@
 <template>
-  <div id="chartdiv"></div>
+  <div ref="chartdiv"></div>
 </template>
 <script lang="ts">
 import { Chart } from '@amcharts/amcharts4/charts';
@@ -28,7 +28,11 @@ class BaseChart extends BaseProps {
   mounted() {
     let { config, type, ...props } = this.$props;
     config = { ...config, ...props };
-    this.$chart = am4core.createFromConfig(config, 'chartdiv', type) as Chart;
+    this.$chart = am4core.createFromConfig(
+      config,
+      this.$refs.chartdiv as HTMLElement,
+      type
+    ) as Chart;
   }
 
   beforeDestroy() {

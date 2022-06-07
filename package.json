@@ -1,6 +1,6 @@
 {
   "name": "vue-amchart4",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "dist/vue-amchart4.ssr.js",
   "browser": "dist/vue-amchart4.esm.js",
   "module": "dist/vue-amchart4.esm.js",
@@ -29,6 +29,7 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-typescript": "^7.14.5",
+    "@oat-sa/rollup-plugin-wildcard-external": "^0.1.0",
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^14.0.0",
