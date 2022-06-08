@@ -1,6 +1,32 @@
 {
   "name": "vue-amchart4",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "author": "Hayoung Jeong <drumrobot43@gmail.com>",
+  "keywords": [
+    "chart",
+    "component",
+    "vue"
+  ],
+  "licenses": [
+    {
+      "type": "Free amCharts license",
+      "url": "https://github.com/amcharts/amcharts4/blob/master/dist/script/LICENSE"
+    },
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Hayoung Jeong",
+      "web": "https://github.com/DrumRobot"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lightsalt-dev/vue-amchart4"
+  },
   "main": "dist/vue-amchart4.ssr.js",
   "browser": "dist/vue-amchart4.esm.js",
   "module": "dist/vue-amchart4.esm.js",
